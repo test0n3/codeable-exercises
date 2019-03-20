@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title><%= @name %> Webpage </title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><img src="#" alt="Logo Carlos A." /></div>
+        <ul>
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#workexp">Work Exp</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="name">
+        <p>My name is</p>
+        <h1><%= @name %></h1>
+      </section>
+      <%= yield %>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<section id="bio">
+  <h2>About myself</h2>
+  <p>
+    I studied in
+    <span class="codeable1">{code<span class="codeable2">able</span>}</span>,
+    and I'm part of the first promotion of
+    <strong>Full Stack developers</strong>. I'm proficient in the following:
+  </p>
+  <ul class="list">
+    <li>Ruby on Rails</li>
+    <li>Javascript</li>
+    <li>ReactJS</li>
+    <li>TypeScript</li>
+    <li>Postgres</li>
+    <li>MongoDB</li>
+  </ul>
+  <p class="footer"><a href="#workexp">next >></a></p>
+</section>
+<section id="workexp">
+  <h2>Work Experience</h2>
+  <p>My work experience actually is:</p>
+  <p class="knowledge">null</p>
+  <p>
+    I'm available to work on site, only in Lima and remotely everywhere else. If
+    you leave me a message, you can use the
+    <a href="/#form">contact form</a> below.
+  </p>
+  <p>
+    Also I'm quite active in some social networks, you can send me a message or
+    follow me at:
+  </p>
+  <ul>
+    <li><a target="_blank" href="https://twitter.com/gerbosan">Twitter</a></li>
+    <li><a target="_blank" href="https://github.com/test0n3">GitHub</a></li>
+  </ul>
+  <p class="footer">
+    <a href="#bio"><< previous</a><a href="#projects">next >></a>
+  </p>
+</section>
+<section id="projects">
+  <h2>My projects</h2>
+  <p>
+    Most of my projects were developed during the bootcamp, still I start new
+    ones focused on adquiring new knowledge or points of view that will improve
+    my productivity as a <strong>Full Stack Developer</strong>.
+  </p>
+  <p>
+    You can check all my projects in
+    <a target="_blank" href="https://github.com/test0n3">Github</a>. Some of my current active
+    projects are:
+  </p>
+  <ul>
+    <li>
+      <a target="_blank" href="#"
+        ><img src="https://placekitten.com/200/200" alt="" />
+        <p>Project01</p></a
+      >
+    </li>
+    <li>
+      <a target="blank" href="#"
+        ><img src="https://placekitten.com/200/200" alt="" />
+        <p>Project02</p></a
+      >
+    </li>
+    <li>
+      <a target="_blank" href="#"
+        ><img src="https://placekitten.com/200/200" alt="" />
+        <p>Project03</p></a
+      >
+    </li>
+  </ul>
+
+  <p class="footer">
+    <a href="#workexp"><< previous</a><a href="#contact">next >></a>
+  </p>
+</section>
+<section id="contact">
+  <h2>Any comments, leave them here and read the ones left.</h2>
+  <form action="/" method="POST">
+    <label for="contact_name">Name: <input type="text" name="contact_name" id="contact_name" required/></label>
+    <label for="contact_email"
+      >email: <input type="email" name="contact_email" id="contact_email" required
+    /></label>
+    <label for="contact_message"
+      >Message<textarea name="contact_message" id="contact_message" cols="30" rows="10"></textarea
+    ></label>
+    <input type="submit" value="send" />
+  </form>
+  <section>
+    <h3>Past messages</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @messages.each do |message|%>
+        <tr>
+          <td><a href="mailto:<%= message["email"] %>"><%= message["name"] %></a></td>
+          <td><%= message["message"] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </section>
+
+  <p class="footer"><a href="#project"><< previous</a></p>
+</section>
