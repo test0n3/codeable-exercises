@@ -8,18 +8,24 @@ def store_message(string)
 end
 
 def read_messages
+  newFile = []
   puts "leyendo libro"
   return [] unless File.exist?("./public/messages.txt")
   file = File.read("./public/messages.txt").split("\n")
-  # newFile = JSON.parse file.gsub("=>", ":")
-  puts "this is #{file}"
-  puts file.class
-  # puts "this is #{newFile}"
-  file.each do |val|
-    puts val["name"]
-    puts val["email"]
-    puts val["message"]
+  file.each do |x|
+    newFile.push(JSON.parse x.gsub("=>", ":"))
   end
+  
+  # newFile = JSON.parse file.gsub("=>", ":")
+  # puts "this is #{newFile}"
+  # puts newFile.class
+  # puts "this is #{newFile}"
+  # file.each do |val|
+  #   puts val["name"]
+  #   puts val["email"]
+  #   puts val["message"]
+  # end
+  newFile
 
 end
 
